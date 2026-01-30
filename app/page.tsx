@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { supabase } from '@/lib/supabase';
 import { Background } from '@/components/Background';
+import { HeroSection } from '@/components/HeroSection';
 import { Header } from '@/components/Header';
 import { ComboGrid } from '@/components/ComboGrid';
 import { FooterCTA } from '@/components/FooterCTA';
@@ -43,15 +44,22 @@ export default async function HomePage() {
     <main className="relative min-h-screen flex flex-col">
       <Background />
       
-      <Header notificationText={textoHeader} />
+      {/* Sección 1: Hero con Header */}
+      <section className="min-h-screen flex flex-col">
+        <Header notificationText={textoHeader} />
+        <HeroSection buttonText={textoBoton} phone={telefonoAnticipada} />
+      </section>
 
-      <Suspense fallback={<ComboGridSkeleton />}>
-        <ComboGrid combos={combos} />
-      </Suspense>
+      {/* Sección 2: Combos */}
+      <section id="combos-section" className="min-h-screen flex flex-col">
+        <Suspense fallback={<ComboGridSkeleton />}>
+          <ComboGrid combos={combos} />
+        </Suspense>
 
-      <FooterCTA buttonText={textoBoton} phone={telefonoAnticipada} />
+        <FooterCTA buttonText={textoBoton} phone={telefonoAnticipada} />
 
-      <Footer />
+        <Footer />
+      </section>
     </main>
   );
 }

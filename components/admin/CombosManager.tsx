@@ -195,6 +195,22 @@ export function CombosManager() {
               />
             </div>
 
+            <div className="md:col-span-2">
+              <label className="block text-sm text-gray-400 mb-1">URL de Imagen (Cloudinary)</label>
+              <input
+                type="url"
+                value={formData.imagen_url || ''}
+                onChange={(e) => setFormData({ ...formData, imagen_url: e.target.value })}
+                className="w-full bg-black/40 border border-white/20 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-purple-500"
+                placeholder="https://res.cloudinary.com/..."
+              />
+              {formData.imagen_url && (
+                <div className="mt-2 text-xs text-gray-500">
+                  Vista previa: <a href={formData.imagen_url} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:underline">Ver imagen</a>
+                </div>
+              )}
+            </div>
+
             <div>
               <label className="block text-sm text-gray-400 mb-1">Texto Listón</label>
               <input

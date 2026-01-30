@@ -21,26 +21,21 @@ export function FooterCTA({ buttonText, phone }: FooterCTAProps) {
   return (
     <section className="w-full py-8 px-4">
       <div className="max-w-7xl mx-auto flex justify-center">
-        {/* Wrapper con gradiente de borde */}
-        <div 
-          className="p-[2px] rounded-full transition-all duration-300 hover:scale-105"
-          style={{
-            background: 'linear-gradient(90deg, #a855f7, #3b82f6, #06b6d4)',
-          }}
+        <button
+          onClick={handleClick}
+          className="
+            gradient-border
+            bg-black/50 backdrop-blur-md
+            text-white font-bold text-lg uppercase tracking-widest
+            px-12 py-4 rounded-full
+            shadow-[0_0_25px_-5px_rgba(255,255,255,0.2)]
+            hover:bg-white/10 hover:shadow-[0_0_35px_-5px_rgba(255,255,255,0.4)]
+            transition-all duration-300
+            hover:scale-105
+          "
         >
-          <button
-            onClick={handleClick}
-            className="
-              bg-black/60 backdrop-blur-md
-              text-white font-bold text-lg uppercase tracking-widest
-              px-12 py-4 rounded-full
-              hover:bg-black/40
-              transition-all duration-300
-            "
-          >
-            {buttonText}
-          </button>
-        </div>
+          <span className="relative z-10">{buttonText}</span>
+        </button>
       </div>
     </section>
   );
