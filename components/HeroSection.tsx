@@ -24,9 +24,9 @@ export function HeroSection({ buttonText, phone }: HeroSectionProps) {
   };
 
   return (
-    <section className="relative flex-grow flex flex-col items-center justify-center px-4 pb-16 pt-5">
+    <section className="relative flex-grow flex flex-col items-center justify-center px-4 pb-16 pt-0">
       {/* Logos Container */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 mb-6 md:mb-16">
+      <div className="flex flex-row md:flex-row items-center justify-center gap-6 md:gap-10 mb-26 md:mb-16">
         {/* Logo 1 */}
         <div className="relative w-40 h-40 md:w-80 md:h-80">
           <Image
