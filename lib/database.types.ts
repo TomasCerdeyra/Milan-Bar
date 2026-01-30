@@ -25,12 +25,26 @@ export type Database = {
         Row: Combo;
         Insert: Omit<Combo, 'id' | 'created_at'>;
         Update: Partial<Omit<Combo, 'id' | 'created_at'>>;
+        Relationships: [];
       };
       configuracion: {
         Row: Configuracion;
         Insert: Omit<Configuracion, 'created_at'>;
         Update: Partial<Omit<Configuracion, 'created_at'>>;
+        Relationships: [];
       };
+    };
+    Views: {
+      [_ in never]: never;
+    };
+    Functions: {
+      [_ in never]: never;
+    };
+    Enums: {
+      [_ in never]: never;
+    };
+    CompositeTypes: {
+      [_ in never]: never;
     };
   };
 };
