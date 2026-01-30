@@ -12,7 +12,7 @@ export function Header({ notificationText }: HeaderProps) {
             MILAN BAR
           </h1>
           <p className="text-gray-400 text-sm tracking-[0.3em] uppercase mt-1">
-            Experience the Night
+            La Barra del Patio
           </p>
         </div>
 

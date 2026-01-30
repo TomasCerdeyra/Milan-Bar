@@ -26,7 +26,7 @@ export function HeroSection({ buttonText, phone }: HeroSectionProps) {
   return (
     <section className="relative flex-grow flex flex-col items-center justify-center px-4 pb-16 pt-5">
       {/* Logos Container */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 mb-12 md:mb-16">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 mb-6 md:mb-16">
         {/* Logo 1 */}
         <div className="relative w-40 h-40 md:w-80 md:h-80">
           <Image
@@ -38,8 +38,20 @@ export function HeroSection({ buttonText, phone }: HeroSectionProps) {
           />
         </div>
 
-        {/* Plus Symbol */}
-        <span className="text-white text-5xl md:text-7xl font-bold">+</span>
+        {/* Plus Symbol with Neon Glow */}
+        <span 
+          className="text-5xl md:text-7xl font-bold"
+          style={{
+            color: '#ffffffff', // cyan-500
+            textShadow: `
+              0 0 5px #ffffffff,
+              0 0 20px #06b6d4,
+              0 0 80px #a855f7
+            `,
+          }}
+        >
+          +
+        </span>
 
         {/* Logo 2 */}
         <div className="relative w-40 h-40 md:w-80 md:h-80">
