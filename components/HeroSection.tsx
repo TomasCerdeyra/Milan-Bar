@@ -56,7 +56,7 @@ export function HeroSection({ buttonText, phone }: HeroSectionProps) {
         {/* Logo 2 */}
         <div className="relative w-40 h-40 md:w-80 md:h-80">
           <Image
-            src="/logo2.png"
+            src="/logo2_v2.png"
             alt="Logo 2"
             fill
             className="object-contain"
