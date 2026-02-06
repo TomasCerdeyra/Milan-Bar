@@ -8,6 +8,9 @@ import { FooterCTA } from '@/components/FooterCTA';
 import { Footer } from '@/components/Footer';
 import { ComboGridSkeleton } from '@/components/Skeletons';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 async function getConfig(clave: string): Promise<string | null> {
   const { data } = await supabase
     .from('configuracion')
